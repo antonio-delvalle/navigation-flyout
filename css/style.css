@@ -1,0 +1,140 @@
+html,
+body,
+div,
+p{
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+html{
+    overflow-x: hidden;
+}
+body {
+    overflow: hidden;
+    position: relative;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#inner #wrapper {
+    background-color: #f4eee6;
+}
+
+#inner-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    transition: left 0.5s ease 0s;
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    float: left;
+}
+
+.nav-toggle::before{
+    content: "O";
+    display: inline-block;
+    height: 3.631em;
+    line-height: 3.631;
+    text-align: center;
+    width: 3.631em;
+}
+
+.nav-toggle {
+    border: 1px solid black;
+}
+
+#navigation {
+    background: none repeat scroll 0 0 #5b2b2e;
+    clear: both;
+    overflow: auto;
+    position: absolute;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    z-index: 99999;
+}
+
+#navigation .inner-nav {
+    margin: 1.387em 2.244em 0;
+    padding-bottom: 2.618em;
+}
+
+#navigation h3 {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+#navigation ul.nav {
+    list-style: outside none none;
+    margin: 0 0 1.618em;
+}
+
+#navigation ul.nav li {
+    list-style: outside none none;
+}
+
+#navigation ul.nav li a {
+    color: #e0c7c8;
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-size: 0.857em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.236em 0;
+    text-transform: uppercase;
+}
+
+#navigation ul.nav li a:hover {
+    color: #ffffff;
+}
+
+#navigation ul.nav li.current-menu-item > a,
+#navigation ul.nav li.current_page_item > a {
+    color: #ffffff;
+    position: relative;
+}
+
+#navigation .nav-close {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+#navigation .nav-close::after {
+    color: #edffff;
+    content: "X";
+    display: inline-block;
+    font-family: "icomoon";
+    font-size: 1em;
+    font-weight: normal;
+    height: 3.631em;
+    line-height: 3.631;
+    margin-left: 0;
+    text-align: center;
+    width: 3.631em;
+}
+
+
+#navigation .nav-close span {
+    display: none;
+}
+
+.show-nav #navigation .top-navigation {
+    display: block;
+}
+
+.show-nav #inner-wrapper {
+    left: 280px;
+}
